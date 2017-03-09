@@ -42,7 +42,10 @@ class Views extends Application
 
 		// and then pass them on
 	    $parms = ['display_tasks' => $converted];
-	    return $this->parser->parse('by_priority', $parms, true);
+	    // INSERT the next two lines
+		$role = $this->session->userdata('userrole');
+		$parms['completer'] = ($role == ROLE_OWNER) ? '/views/complete' : '#';
+		return $this->parser->parse('by_priority', $parms, true);
 	}
 
 	function makeCategorizedPanel($tasks)
