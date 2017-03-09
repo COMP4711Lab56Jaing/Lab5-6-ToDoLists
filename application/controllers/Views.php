@@ -69,7 +69,7 @@ class Views extends Application
 				$this->tasks->update($task);
 			}
 		}
-		$this->index();
+		$this->index(); 
 	}
 }
 
