@@ -19,5 +19,6 @@
 		{/display_tasks}    
 	</table>
 
-<input type='submit' value='Complete checked tasks'/>
+	<input type='submit' value='Complete checked tasks'/>
+	
 </form>
